@@ -27,6 +27,8 @@ install_plugin Capistrano::SCM::Git
 #   https://github.com/capistrano/passenger
 #
 require "capistrano/rvm"
+set :rvm_type, :user
+set :rvm_ruby_version, '2.3.1'
 # require "capistrano/rbenv"
 # require "capistrano/chruby"
 require "capistrano/bundler"
