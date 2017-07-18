@@ -1,25 +1,65 @@
-<p id="notice"><%= notice %></p>
+<body>
+<h1>Tammy's App</h1>
 
-<h1>Resumes</h1>
+<form>
+  <h1>Testing   Page</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="contentform">
+    <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
 
-  <tbody>
-    <% @resumes.each do |resume| %>
-      <tr>
-        <td><%= link_to 'Show', resume %></td>
-        <td><%= link_to 'Edit', edit_resume_path(resume) %></td>
-        <td><%= link_to 'Destroy', resume, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+    <div class="leftcontact">
+      <div class="form-group">
+        <p>Name<span>*</span></p>
+        <span class="icon-case"><i class="glyphicon glyphicon-user"></i></span>
+        <input type="text" name="nom" id="nom" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
+        <div class="validation"></div>
+      </div>
 
-<%= link_to 'New Resume', new_resume_path %>
+      <div class="form-group">
+        <p>E-mail <span>*</span></p>
+        <span class="icon-case"><i class="glyphicon glyphicon-envelope"></i></span>
+        <input type="email" name="email" id="email" data-rule="email" data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/>
+        <div class="validation"></div>
+      </div>
+
+      <div class="form-group">
+        <p>College <span>*</span></p>
+        <span class="icon-case"><i class="glyphicon glyphicon-book"></i></span>
+        <input type="text" name="society" id="society" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Société' doit être renseigné."/>
+        <div class="validation"></div>
+      </div>
+
+    </div>
+
+    <div class="rightcontact">
+
+      <div class="form-group">
+        <p>City <span>*</span></p>
+        <span class="icon-case"><i class="glyphicon glyphicon-home"></i></span>
+        <input type="text" name="ville" id="ville" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné."/>
+        <div class="validation"></div>
+      </div>
+
+      <div class="form-group">
+        <p>Phone number <span>*</span></p>
+        <span class="icon-case"><i class="glyphicon glyphicon-phone"></i></span>
+        <input type="text" name="phone" id="phone" data-rule="maxlen:10" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres"/>
+        <div class="validation"></div>
+      </div>
+
+      <div class="form-group">
+        <p> Intro <span>*</span></p>
+        <span class="icon-case"><i class="glyphicon glyphicon-comment"></i></span>
+        <textarea name="message" rows="14" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Message' doit être renseigné."></textarea>
+        <div class="validation"></div>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="bouton-contact">Send</button>
+
+</form>
+
+
+</body>
+</html>
