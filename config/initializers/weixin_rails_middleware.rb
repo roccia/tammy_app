@@ -13,11 +13,11 @@ WeixinRailsMiddleware.configure do |config|
   ## Here configure is for you DON'T WANT TO SAVE your public account into database ##
   # Or the other configure is fit for only one weixin public_account
   # If you config `weixin_token_string`, so it will directly use it
-   config.weixin_token_string = 'a4dfef879b23943202636c01'
+   config.weixin_token_string = 'c04209ead1f44f47ea939386'
   # using to weixin server url to validate the token can be trusted.
-   config.weixin_secret_string = 'GpMoq48nO42yDJKuBoXVHhpklfHtv1n_'
+   config.weixin_secret_string = 'gdvqmouigsbtlz9nkmyaylvelet2clrscxo1un88yy0'
   # 加密配置，如果需要加密，配置以下参数
-  # config.encoding_aes_key = '126d3ed920fcc4bfb4bd213c25dd71b9926804a27a9'
+   config.encoding_aes_key = 'lpd4WCgvKNFYU0TTAKzDmNDvOlStIpH1hyPyVm6sEBk'
   # config.app_id = "your app id"
 
   ## You can custom your adapter to validate your weixin account ##
