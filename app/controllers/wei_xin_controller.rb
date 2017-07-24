@@ -1,0 +1,3 @@
+class WeiXinController < ApplicationController
+
+end

@@ -18,7 +18,7 @@ WeixinRailsMiddleware.configure do |config|
    config.weixin_secret_string = 'gdvqmouigsbtlz9nkmyaylvelet2clrscxo1un88yy0'
   # 加密配置，如果需要加密，配置以下参数
    config.encoding_aes_key = 'lpd4WCgvKNFYU0TTAKzDmNDvOlStIpH1hyPyVm6sEBk'
-  # config.app_id = "your app id"
+   config.app_id = "wx8e6a5c58e548aaaf"
 
   ## You can custom your adapter to validate your weixin account ##
   # Wiki https://github.com/lanrion/weixin_rails_middleware/wiki/Custom-Adapter
