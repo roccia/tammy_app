@@ -61,5 +61,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'weixin_rails_middleware'
+gem 'weixin_rails_middleware', git: "https://github.com/lanrion/weixin_rails_middleware.git"
 gem 'weixin_authorize'
