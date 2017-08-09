@@ -1,65 +1,27 @@
-<body>
-<h1>Tammy's App</h1>
-
-<form>
-  <h1>Testing   Page</h1>
-
-  <div class="contentform">
-    <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
-
-
-    <div class="leftcontact">
-      <div class="form-group">
-        <p>Name<span>*</span></p>
-        <span class="icon-case"><i class="glyphicon glyphicon-user"></i></span>
-        <input type="text" name="nom" id="nom" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
-        <div class="validation"></div>
-      </div>
-
-      <div class="form-group">
-        <p>E-mail <span>*</span></p>
-        <span class="icon-case"><i class="glyphicon glyphicon-envelope"></i></span>
-        <input type="email" name="email" id="email" data-rule="email" data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/>
-        <div class="validation"></div>
-      </div>
-
-      <div class="form-group">
-        <p>College <span>*</span></p>
-        <span class="icon-case"><i class="glyphicon glyphicon-book"></i></span>
-        <input type="text" name="society" id="society" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Société' doit être renseigné."/>
-        <div class="validation"></div>
-      </div>
-
+<% if !flash[:notice].blank? %>
+    <div class="alert alert-info">
+      <%= flash[:notice] %>
     </div>
-
-    <div class="rightcontact">
-
-      <div class="form-group">
-        <p>City <span>*</span></p>
-        <span class="icon-case"><i class="glyphicon glyphicon-home"></i></span>
-        <input type="text" name="ville" id="ville" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné."/>
-        <div class="validation"></div>
-      </div>
-
-      <div class="form-group">
-        <p>Phone number <span>*</span></p>
-        <span class="icon-case"><i class="glyphicon glyphicon-phone"></i></span>
-        <input type="text" name="phone" id="phone" data-rule="maxlen:10" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres"/>
-        <div class="validation"></div>
-      </div>
-
-      <div class="form-group">
-        <p> Intro <span>*</span></p>
-        <span class="icon-case"><i class="glyphicon glyphicon-comment"></i></span>
-        <textarea name="message" rows="14" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Message' doit être renseigné."></textarea>
-        <div class="validation"></div>
-      </div>
-    </div>
-  </div>
-  <button type="submit" class="bouton-contact">Send</button>
-
-</form>
-
-
-</body>
-</html>
+<% end %>
+<br />
+<%= link_to "New Resume", new_resume_path, class: "btn btn-primary" %>
+<br />
+<br />
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Download Link</th>
+    <th>&nbsp;</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @resumes.each do |resume| %>
+      <tr>
+        <td><%= resume.name %></td>
+        <td><%= resume.items.count %></td>
+        <td><%= button_to "Delete",  resume, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{resume.name}?" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

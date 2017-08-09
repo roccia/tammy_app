@@ -1,4 +1,5 @@
 class ResumesController < ApplicationController
+  before_action
   before_action :set_resume, only: [:show, :edit, :update, :destroy]
 
   # GET /resumes
@@ -15,6 +16,8 @@ class ResumesController < ApplicationController
   # GET /resumes/new
   def new
     @resume = Resume.new
+    @items = @resume.items.build
+
   end
 
   # GET /resumes/1/edit
@@ -28,6 +31,9 @@ class ResumesController < ApplicationController
 
     respond_to do |format|
       if @resume.save
+        params[:items]['image'].each do |a|
+          @items = @resume.items.create!(:image => a, :resume_id => @resume.id)
+        end
         format.html { redirect_to @resume, notice: 'Resume was successfully created.' }
         format.json { render :show, status: :created, location: @resume }
       else
@@ -69,6 +75,6 @@ class ResumesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resume_params
-      params.fetch(:resume, {})
+      params.require(:resume).permit(:name, :mobile_number,:birthday, :college,:introduction, :email)
     end
 end

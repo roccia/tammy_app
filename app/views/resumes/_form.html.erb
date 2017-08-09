@@ -1,17 +1,46 @@
-<%= form_with(model: resume, local: true) do |form| %>
-  <% if resume.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(resume.errors.count, "error") %> prohibited this resume from being saved:</h2>
-
+<% if !@resume.errors.empty? %>
+    <div class="alert alert-error">
       <ul>
-      <% resume.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @resume.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
+
+<div class="well">
+  <%= form_for @resume, html: { multipart: true } do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :mobile_number %>
+      <%= f.text_field :mobile_number %>
+
+
+      <%= f.label :birthday %>
+      <%= f.text_field :birthday %>
+
+
+      <%= f.label :college %>
+      <%= f.text_field :college %>
+
+
+      <%= f.label :introduction %>
+      <%= f.text_field :introduction %>
+
+
+      <%= f.fields_for :items do |p| %>
+          <div class="field">
+            <%= p.label :image %><br>
+            <%= p.file_field :image, :multiple => true, name: "items[image][]" %>
+          </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+  <% end %>
+</div>
