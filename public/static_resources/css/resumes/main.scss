@@ -1,0 +1,33 @@
+h1{
+  margin: 30px 0!important;
+}
+.well{
+  form{
+    background: none;
+    .input-group {
+      display: block!important;
+      span.input-group-addon{
+        display: none;
+      }
+      .form-control{
+        margin-bottom: 15px;
+        border-radius: 5px!important;
+      }
+      @media (max-width: 768px) {
+        display: table!important;
+        span.input-group-addon{
+          display: table-cell;
+        }
+        .form-control{
+          margin-bottom: 0;
+          border-bottom-left-radius: 0!important;
+          border-top-left-radius: 0!important;
+        }
+      }
+    }
+    .submit-btn{
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}

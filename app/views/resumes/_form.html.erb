@@ -9,38 +9,96 @@
 <% end %>
 
 <div class="well">
-  <%= form_for @resume, html: { multipart: true } do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+  <%= form_for @resume, html: { multipart: true, class: "form-horizontal" } do |f| %>
+    <div class="form-group">
+        <%= f.label :name, class: 'hidden-xs control-label col-sm-3' %>
+        <div class="col-sm-9">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                </span>
+                <%= f.text_field :name, class: 'form-control',placeholder: 'name' %>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <%= f.label :email, class: 'hidden-xs control-label col-sm-3' %>
+        <div class="col-sm-9">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                </span>
+                <%= f.text_field :email, class: 'form-control',placeholder: 'email' %>
+            </div>
+        </div>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+    </div>
+    <div class="form-group">
+        <%= f.label :mobile_number, class: 'hidden-xs control-label col-sm-3' %>
+        <div class="col-sm-9">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                </span>
+                <%= f.text_field :mobile_number , class: 'form-control',placeholder: 'mobile number'%>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <%= f.label :birthday, class: 'hidden-xs control-label col-sm-3' %>
+        <div class="col-sm-9">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                </span>
+                <%= f.text_field :birthday, class: 'form-control',placeholder: 'birthday' %>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <%= f.label :college, class: 'hidden-xs control-label col-sm-3' %>
+        <div class="col-sm-9">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                </span>
+                <%= f.text_field :college, class: 'form-control',placeholder: 'college' %>
+            </div>
+        </div>
+    </div>
 
-      <%= f.label :mobile_number %>
-      <%= f.text_field :mobile_number %>
-
-
-      <%= f.label :birthday %>
-      <%= f.text_field :birthday %>
-
-
-      <%= f.label :college %>
-      <%= f.text_field :college %>
-
-
-      <%= f.label :introduction %>
-      <%= f.text_field :introduction %>
+    <div class="form-group">
+        <%= f.label :introduction, class: 'hidden-xs control-label col-sm-3' %>
+        <div class="col-sm-9">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                </span>
+                <%= f.text_field :introduction, class: 'form-control',placeholder: 'introduction' %>
+            </div>
+        </div>
+    </div>
 
 
       <%= f.fields_for :items do |p| %>
-          <div class="field">
-            <%= p.label :image %><br>
-            <%= p.file_field :image, :multiple => true, name: "items[image][]" %>
+          <div class="form-group">
+            <%= p.label :image , class: 'hidden-xs control-label col-sm-3'%>
+              <div class="col-sm-9">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                    </span>
+                      <%= p.file_field :image, :multiple => true, name: "items[image][]", class: 'form-control' %>
+                  </div>
+              </div>
           </div>
       <% end %>
 
-      <div class="actions">
-        <%= f.submit %>
+      <div class="form-group">
+          <label class="hidden-xs control-label col-sm-3"></label>
+          <div class="col-sm-9">
+              <%= f.submit class: "btn btn-danger submit-btn" %>
+          </div>
       </div>
   <% end %>
 </div>

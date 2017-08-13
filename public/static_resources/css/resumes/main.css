@@ -1,0 +1,26 @@
+h1 {
+  margin: 30px 0 !important; }
+
+.well form {
+  background: none; }
+  .well form .input-group {
+    display: block !important; }
+    .well form .input-group span.input-group-addon {
+      display: none; }
+    .well form .input-group .form-control {
+      margin-bottom: 15px;
+      border-radius: 5px !important; }
+    @media (max-width: 768px) {
+      .well form .input-group {
+        display: table !important; }
+        .well form .input-group span.input-group-addon {
+          display: table-cell; }
+        .well form .input-group .form-control {
+          margin-bottom: 0;
+          border-bottom-left-radius: 0 !important;
+          border-top-left-radius: 0 !important; } }
+  .well form .submit-btn {
+    width: 100%;
+    margin-top: 20px; }
+
+/*# sourceMappingURL=main.css.map */
