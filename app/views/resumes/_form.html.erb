@@ -62,7 +62,7 @@
                 <span class="input-group-addon" >
                     <span class="fa fa-venus-mars" aria-hidden="true"></span>
                 </span>
-            <%= f.select :gender, ['male','female'], {},  {'data-width' => "80%",class: 'selectpicker', 'valid-required' => true } %>
+            <%= f.select :gender, ['MALE','FEMALE'], {},  {'data-width' => "100%",class: 'selectpicker', 'valid-required' => true } %>
          </div>
       </div>
 
@@ -78,10 +78,11 @@
         </div>
     </div>
 
+      <p class="text-danger">Notice: <a class="text-muted"> IOS only support images, Android supports PDF,DOC,JPG </a> </p>
 
       <%= f.fields_for :items do |p| %>
           <div class="form-group">
-            <%= p.label :image , class: 'hidden-xs control-label col-sm-3'%>
+            <%= p.label :image , class: 'hidden-xs control-label col-sm-3 '%>
               <div class="col-sm-9">
                   <div class="input-group">
                     <span class="input-group-addon">
