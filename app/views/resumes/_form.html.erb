@@ -51,7 +51,7 @@
                 <span class="input-group-addon">
                     <span class="fa fa-birthday-cake" aria-hidden="true"></span>
                 </span>
-                <%= f.text_field :birthday, class: 'form-control', data: { date_format: 'YYYY/MM/DD' },placeholder: 'Birthday' ,'valid-required' => true%>
+            <%= f.date_select :birthday, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100}, {required: true} %>
             </div>
         </div>
     </div>
