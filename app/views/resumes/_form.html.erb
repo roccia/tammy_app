@@ -8,102 +8,118 @@
     </div>
 <% end %>
 
-<div class="well"  >
-  <%= form_for @resume, html: { multipart: true, class: "form-horizontal" } do |f| %>
-    <div class="form-group">
+<div class="well">
+  <%= form_for @resume, html: {multipart: true, class: "form-horizontal"} do |f| %>
+      <div class="form-group">
         <%= f.label :name, class: 'hidden-xs control-label col-sm-3' %>
         <div class="col-sm-9">
-            <div class="input-group">
+          <div class="input-group">
                 <span class="input-group-addon">
-                    <span class="fa fa-user-circle" aria-hidden="true"></span>
+                    <span class="fa fa-user-circle fa-fw" aria-hidden="true"></span>
                 </span>
-                <%= f.text_field :name, class: 'form-control',placeholder: 'Your Name' ,'valid-required' => true %>
-            </div>
+            <%= f.text_field :name, class: 'form-control', placeholder: 'Your Name', 'valid-required' => true %>
+          </div>
         </div>
-    </div>
-    <div class="form-group">
+      </div>
+      <div class="form-group">
         <%= f.label :email, class: 'hidden-xs control-label col-sm-3' %>
         <div class="col-sm-9">
-            <div class="input-group">
+          <div class="input-group">
                 <span class="input-group-addon">
-                    <span class="fa fa-envelope" aria-hidden="true"></span>
+                    <span class="fa fa-envelope fa-fw" aria-hidden="true"></span>
                 </span>
-                <%= f.text_field :email, class: 'form-control',placeholder: 'Email' ,'valid-required' => true %>
-            </div>
+            <%= f.text_field :email, class: 'form-control', placeholder: 'Email', 'valid-required' => true %>
+          </div>
         </div>
+      </div>
 
-    </div>
-    <div class="form-group">
+
+      <div class="form-group">
         <%= f.label :mobile_number, class: 'hidden-xs control-label col-sm-3' %>
         <div class="col-sm-9">
-            <div class="input-group">
+          <div class="input-group">
                 <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                    <span class="fa fa-phone fa-fw" aria-hidden="true"></span>
                 </span>
-                <%= f.text_field :mobile_number , class: 'form-control',placeholder: 'Mobile Number','valid-required' => true%>
-            </div>
+            <%= f.text_field :mobile_number, class: 'form-control', placeholder: 'Mobile Number', 'valid-required' => true %>
+          </div>
         </div>
-    </div>
-    <div class="form-group">
-      <%= f.label :birthday, class: 'hidden-xs control-label col-sm-3' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :location, class: 'hidden-xs control-label col-sm-3' %>
         <div class="col-sm-9">
-          <div class='input-group date' >
+          <div class="input-group">
                 <span class="input-group-addon">
-                    <span class="fa fa-birthday-cake" aria-hidden="true"></span>
+                    <span class="fa fa-map-marker fa-fw" aria-hidden="true"></span>
                 </span>
-            <%= f.date_select :birthday, {order: [:month, :year], prompt: { month: 'Month', year: 'Year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100},
-                              {required: true, class:"form-control",style:"float:left;
-  width: 100px;"} %>
-            </div>
+            <%= f.select :location, ['Beijing', 'Shanghai','Guangzhou'], {include_blank: ''}, {class: 'form-control', style: "float:left;
+  width: 100px;", required: true} %>
+          </div>
         </div>
-    </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :birthday, class: 'hidden-xs control-label col-sm-3' %>
+        <div class="col-sm-9">
+          <div class='input-group date'>
+                <span class="input-group-addon">
+                    <span class="fa fa-birthday-cake fa-fw" aria-hidden="true"></span>
+                </span>
+            <%= f.date_select :birthday, {order: [:month, :year], prompt: {month: 'Month', year: 'Year'}, start_year: Date.today.year - 18, end_year: Date.today.year - 100},
+                              {required: true, class: "form-control", style: "float:left;
+                                                                           width: 100px;"} %>
+          </div>
+        </div>
+      </div>
 
       <div class="form-group">
         <%= f.label :gender, class: 'hidden-xs control-label col-sm-3 ' %>
         <div class="col-sm-9">
-           <div class="input-group ">
-                <span class="input-group-addon" >
-                    <span class="fa fa-venus-mars" aria-hidden="true"></span>
+          <div class="input-group ">
+                <span class="input-group-addon">
+                    <span class="fa fa-venus-mars fa-fw" aria-hidden="true"></span>
                 </span>
-            <%= f.select :gender, ['MALE','FEMALE'], {include_blank:'Gender'},  {class: 'form-control', style:"float:left;
-  width: 100px;", required: true } %>
-            </div>
+            <%= f.select :gender, ['MALE', 'FEMALE'], {include_blank: 'Gender'}, {class: 'form-control', style: "float:left;
+  width: 100px;", required: true} %>
+          </div>
         </div>
       </div>
 
-    <div class="form-group">
+      <div class="form-group">
         <%= f.label :college, class: 'hidden-xs control-label col-sm-3' %>
         <div class="col-sm-9">
-            <div class="input-group">
+          <div class="input-group">
                 <span class="input-group-addon">
-                    <span class="fa fa-university" aria-hidden="true"></span>
+                    <span class="fa fa-university fa-fw" aria-hidden="true"></span>
                 </span>
-                <%= f.text_field :college, class: 'form-control',placeholder: 'College' %>
-            </div>
+            <%= f.text_field :college, class: 'form-control', placeholder: 'College' %>
+          </div>
         </div>
-    </div>
+      </div>
 
-      <p class="text-danger">Notice: <a class="text-muted"> IOS only support images, Android supports PDF,DOC,JPG </a> </p>
+      <p class="text-danger">Notice: <a class="text-muted"> IOS only support images, Android supports PDF,DOC,JPG </a>
+      </p>
 
       <%= f.fields_for :items do |p| %>
           <div class="form-group">
-            <%= p.label :image , class: 'hidden-xs control-label col-sm-3 '%>
-              <div class="col-sm-9">
-                  <div class="input-group">
+            <%= p.label :image, class: 'hidden-xs control-label col-sm-3 ' %>
+            <div class="col-sm-9">
+              <div class="input-group">
                     <span class="input-group-addon">
-                        <span class="fa fa-camera" aria-hidden="true"></span>
+                        <span class="fa fa-camera fa-fw" aria-hidden="true"></span>
                     </span>
-                      <%= p.file_field :image, :multiple => true, name: "items[image][]", class: 'form-control','valid-required' => true %>
-                  </div>
+                <%= p.file_field :image, :multiple => true, name: "items[image][]", class: 'form-control', 'valid-required' => true %>
               </div>
+            </div>
           </div>
       <% end %>
 
       <div class="form-group">
-          <label class="hidden-xs control-label col-sm-3"></label>
-          <div class="col-sm-9">
-              <%= f.submit 'Submit Resume', class: "btn submit-btn"  %>
-          </div>
+        <label class="hidden-xs control-label col-sm-3"></label>
+        <div class="col-sm-9">
+          <%= f.submit 'Submit Resume', class: "btn submit-btn" %>
+        </div>
       </div>
   <% end %>
 </div>

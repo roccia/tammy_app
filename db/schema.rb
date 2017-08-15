@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170815020857) do
+ActiveRecord::Schema.define(version: 20170815150226) do
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "resume_id"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20170815020857) do
     t.string "cv_images"
     t.string "email"
     t.string "gender"
+    t.string "location"
   end
 
   create_table "wexin_public_accounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
