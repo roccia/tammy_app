@@ -65,3 +65,9 @@ gem 'weixin_rails_middleware', git: "https://github.com/lanrion/weixin_rails_mid
 gem 'weixin_authorize'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+gem 'momentjs-rails', '>= 2.9.0'
+
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
+gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-select-rails'
+gem "font-awesome-rails"
