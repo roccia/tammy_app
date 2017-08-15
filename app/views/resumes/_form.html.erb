@@ -55,6 +55,8 @@
                 </span>
             <%= f.select :location, ['Beijing', 'Shanghai','Guangzhou'], {include_blank: ''}, {class: 'form-control', style: "float:left;
   width: 100px;", required: true} %>
+            <p class="text-danger", style="font-size:8px; padding:5px ">*<a class="text-muted">Excpeted Location </a>
+            </p>
           </div>
         </div>
       </div>
@@ -98,7 +100,7 @@
         </div>
       </div>
 
-      <p class="text-danger", style="font-size:10px">Notice: <a class="text-muted"> IOS only supports images, Android supports PDF,DOC,DOCX,JPG </a>
+      <p class="text-danger", style="font-size:10px">NOTICE: <a class="text-muted"> IOS only supports images, Android supports PDF,DOC,DOCX,JPG </a>
       </p>
 
       <%= f.fields_for :items do |p| %>
