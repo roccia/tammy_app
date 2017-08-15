@@ -11,15 +11,22 @@
   <thead>
   <tr>
     <th>Name</th>
-    <th>Download Link</th>
-    <th>&nbsp;</th>
+    <th>Mobile Number</th>
+    <th>Email</th>
+    <th>Gender</th>
+    <th>College</th>
+    <th>Action</th>
+
   </tr>
   </thead>
   <tbody>
   <% @resumes.each do |resume| %>
       <tr>
         <td><%= resume.name %></td>
-        <td><%= resume.items.count %></td>
+        <td><%= resume.mobile_number %></td>
+        <td><%= resume.email %></td>
+        <td><%= resume.gender %></td>
+        <td><%= resume.college %></td>
         <td><%= button_to "Delete",  resume, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{resume.name}?" %></td>
       </tr>
   <% end %>
