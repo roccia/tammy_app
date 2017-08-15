@@ -71,3 +71,4 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 gem 'bootstrap-datepicker-rails'
 gem 'bootstrap-select-rails'
 gem "font-awesome-rails"
+gem 'font-awesome-sass'

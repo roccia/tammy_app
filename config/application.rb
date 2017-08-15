@@ -14,7 +14,7 @@ module TammyApp
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
     end
-
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 

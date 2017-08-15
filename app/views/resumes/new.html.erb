@@ -1,4 +1,48 @@
 <% content_for :header do %>
 <link rel="stylesheet" href="/static_resources/css/resumes/main.css" />
 <% end %>
+
+<div class="containerBox" >
+  <div class="text-box">
+    <h4>Show Up Differently</h4>
+  </div>
+  <%= image_tag "logo.png", class:"img" %>
+
+</div>
 <%= render 'form' %>
+
+<style>
+  .containerBox {
+    position: relative;
+    display: inline-block;
+  }
+
+  .text-box {
+    position: absolute;
+    bottom:0;
+    right:0;
+     text-align: center;
+    }
+
+  .text-box:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  h4 {
+    display: inline-block;
+    font-size: 20px; /*or whatever you want*/
+    font-family: <%= $my_font %>;
+    color: black;
+  }
+
+  img {
+    display: block;
+    max-width:40%;
+   max-height:40%;"
+
+  }
+
+</style>
