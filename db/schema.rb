@@ -33,4 +33,13 @@ ActiveRecord::Schema.define(version: 20170815020857) do
     t.string "gender"
   end
 
+  create_table "wexin_public_accounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "weixin_secret_key"
+    t.string "weixin_token"
+    t.index ["weixin_secret_key"], name: "index_wexin_public_accounts_on_weixin_secret_key"
+    t.index ["weixin_token"], name: "index_wexin_public_accounts_on_weixin_token"
+  end
+
 end
