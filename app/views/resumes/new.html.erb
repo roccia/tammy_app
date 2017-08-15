@@ -7,9 +7,8 @@
     <h4>SHOW UP DIFFERENTLY</h4>
   </div>
   <%= image_tag "logo.png", class:"img" %>
-
+  <%= render 'form' %>
 </div>
-<%= render 'form' %>
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -17,11 +16,12 @@
   .containerBox {
     position: relative;
     display: inline-block;
+    border: 3px solid #0b7ac0;
   }
 
   .text-box {
     position: absolute;
-    bottom:7px;
+    bottom:90%;
     right:10px;
 
     }
