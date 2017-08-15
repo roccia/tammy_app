@@ -47,11 +47,13 @@
     <div class="form-group">
       <%= f.label :birthday, class: 'hidden-xs control-label col-sm-3' %>
         <div class="col-sm-9">
-          <div class='input-group date' id='datetimepicker1'>
+          <div class='input-group date' >
                 <span class="input-group-addon">
                     <span class="fa fa-birthday-cake" aria-hidden="true"></span>
                 </span>
-            <%= f.date_select :birthday, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100}, {required: true} %>
+            <%= f.date_select :birthday, {order: [:month, :year], prompt: { month: 'Month', year: 'Year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100},
+                              {required: true, style:"float:left;
+  width: 100px;"} %>
             </div>
         </div>
     </div>
