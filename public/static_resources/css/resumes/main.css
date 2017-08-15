@@ -2,7 +2,8 @@ h1 {
   margin: 30px 0 !important; }
 
 .well form {
-  background: none;  }
+  background: none;
+}
   .well form .input-group {
     display: block !important; }
     .well form .input-group span.input-group-addon {
