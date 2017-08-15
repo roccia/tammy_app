@@ -52,7 +52,7 @@
                     <span class="fa fa-birthday-cake" aria-hidden="true"></span>
                 </span>
             <%= f.date_select :birthday, {order: [:month, :year], prompt: { month: 'Month', year: 'Year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100},
-                              {required: true, style:"float:left;
+                              {required: true, class:"form-control",style:"float:left;
   width: 100px;"} %>
             </div>
         </div>
@@ -60,11 +60,12 @@
 
       <div class="form-group">
         <%= f.label :gender, class: 'hidden-xs control-label col-sm-3 ' %>
-           <div class="input-group">
+           <div class="input-group ">
                 <span class="input-group-addon" >
                     <span class="fa fa-venus-mars" aria-hidden="true"></span>
                 </span>
-            <%= f.select :gender, ['MALE','FEMALE'], {},  {class: '', 'valid-required' => true } %>
+            <%= f.select :gender, ['MALE','FEMALE'], {},  {class: 'form-control', style:"float:left;
+  width: 100px;", required: true } %>
             </div>
       </div>
 
