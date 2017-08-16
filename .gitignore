@@ -16,6 +16,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/public/uploads
 
 /node_modules
 /yarn-error.log
@@ -23,4 +24,4 @@
 .byebug_history
 config/database.yml\nconfig/secrets.yml
 config/database.yml\nconfig/secrets.yml
-./.idea
+/.idea
