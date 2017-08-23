@@ -108,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/app/uploaders/resume_pics_uploader.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+              <caret line="32" column="2" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="34" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -648,12 +648,12 @@
       <workItem from="1502762067372" duration="352000" />
       <workItem from="1502762445988" duration="13449000" />
       <workItem from="1502803687377" duration="6901000" />
-      <workItem from="1503460691256" duration="6133000" />
+      <workItem from="1503460691256" duration="6181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56308000" />
+    <option name="totallyTimeSpent" value="56356000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1066,7 +1066,7 @@
     <entry file="file://$PROJECT_DIR$/app/uploaders/resume_pics_uploader.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <caret line="32" column="2" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="34" selection-end-column="7" />
           <folding />
         </state>
       </provider>
