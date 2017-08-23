@@ -17,7 +17,7 @@
                 <span class="input-group-addon">
                     <span class="fa fa-user-circle fa-fw" aria-hidden="true"></span>
                 </span>
-            <%= f.text_field :name, class: 'form-control', placeholder: 'Your Name', 'valid-required' => true %>
+            <%= f.text_field :name, class: 'form-control', placeholder: 'Your Name',  required:true %>
           </div>
         </div>
       </div>
@@ -28,7 +28,7 @@
                 <span class="input-group-addon">
                     <span class="fa fa-envelope fa-fw" aria-hidden="true"></span>
                 </span>
-            <%= f.text_field :email, class: 'form-control', placeholder: 'Email', 'valid-required' => true %>
+            <%= f.text_field :email, class: 'form-control', placeholder: 'Email', required:true %>
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@
                 <span class="input-group-addon">
                     <span class="fa fa-phone fa-fw" aria-hidden="true"></span>
                 </span>
-            <%= f.text_field :mobile_number, class: 'form-control', placeholder: 'Mobile Number', 'valid-required' => true %>
+            <%= f.text_field :mobile_number, class: 'form-control', placeholder: 'Mobile Number', required:true %>
           </div>
         </div>
       </div>
@@ -63,12 +63,12 @@
 
       <div class="form-group">
         <%= f.label :birthday, class: 'hidden-xs control-label col-sm-3' %>
-        <div class="col-sm-9">
+        <div class="col-sm-9 ">
           <div class='input-group date'>
                 <span class="input-group-addon">
                     <span class="fa fa-birthday-cake fa-fw" aria-hidden="true"></span>
                 </span>
-            <%= f.date_select :birthday, {order: [:month, :year], prompt: {month: 'Month', year: 'Year'}, start_year: Date.today.year - 18, end_year: Date.today.year - 100},
+            <%= f.date_select :birthday, {order: [:month, :year], discard_day:true,prompt: {month: 'Month', year: 'Year'}, start_year: Date.today.year - 18, end_year: Date.today.year - 100},
                               {required: true, class: "form-control", style: "float:left;
                                                                            width: 100px;"} %>
           </div>
@@ -83,7 +83,7 @@
                     <span class="fa fa-venus-mars fa-fw" aria-hidden="true"></span>
                 </span>
             <%= f.select :gender, ['MALE', 'FEMALE'], {include_blank: 'Gender'}, {class: 'form-control', style: "float:left;
-  width: 100px;", required: true} %>
+  width: 100px;"} %>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@
                     <span class="input-group-addon">
                         <span class="fa fa-camera fa-fw" aria-hidden="true"></span>
                     </span>
-                <%= p.file_field :image, :multiple => true, name: "items[image][]", class: 'form-control', 'valid-required' => true %>
+                <%= p.file_field :image, :multiple => true, name: "items[image][]", class: 'form-control' %>
               </div>
             </div>
           </div>

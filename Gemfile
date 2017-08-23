@@ -72,3 +72,4 @@ gem 'bootstrap-datepicker-rails'
 gem 'bootstrap-select-rails'
 gem "font-awesome-rails"
 gem 'font-awesome-sass'
+gem 'devise'
