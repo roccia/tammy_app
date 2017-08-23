@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d7b335a8-3969-4c3c-975a-34f5a6f834a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/uploaders/resume_pics_uploader.rb" afterPath="$PROJECT_DIR$/app/uploaders/resume_pics_uploader.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -93,11 +94,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resumes_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="resumes_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/resumes_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
               <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resume_pics_uploader.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/uploaders/resume_pics_uploader.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -173,7 +184,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_naigation.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navigation_links.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
-        <option value="$PROJECT_DIR$/app/uploaders/resume_pics_uploader.rb" />
         <option value="$PROJECT_DIR$/app/models/resume.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admins_controller.rb" />
@@ -191,6 +201,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/resume.html.erb" />
         <option value="$PROJECT_DIR$/app/views/resumes/saved.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/resumes_controller.rb" />
+        <option value="$PROJECT_DIR$/app/uploaders/resume_pics_uploader.rb" />
       </list>
     </option>
   </component>
@@ -262,6 +273,12 @@
               <item name="tammy_app" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tammy_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tammy_app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="uploaders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tammy_app" type="b2602c69:ProjectViewProjectNode" />
@@ -631,12 +648,12 @@
       <workItem from="1502762067372" duration="352000" />
       <workItem from="1502762445988" duration="13449000" />
       <workItem from="1502803687377" duration="6901000" />
-      <workItem from="1503460691256" duration="5987000" />
+      <workItem from="1503460691256" duration="6133000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56162000" />
+    <option name="totallyTimeSpent" value="56308000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -649,7 +666,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="587" y="23" width="1387" height="1060" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3330855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -658,7 +674,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.49739778" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31488934" sideWeight="0.49739778" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31488934" sideWeight="0.49739778" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -791,14 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/uploaders/resume_pics_uploader.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1051,6 +1059,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/uploaders/resume_pics_uploader.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
           <folding />
         </state>
       </provider>
