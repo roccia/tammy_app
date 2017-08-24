@@ -1,6 +1,6 @@
 class ResumesController < ApplicationController
   layout 'resume'
-  before_action :check_permission, except: [:create,:saved]
+  before_action :check_permission, except: [:create, :saved]
   before_action :set_resume, only: [:show, :edit, :update, :destroy]
 
   # GET /resumes
@@ -31,8 +31,12 @@ class ResumesController < ApplicationController
     respond_to do |format|
       if @resume.save
         if !params[:items].blank?
-          params[:items]['image'].each do |a|
-            @items = @resume.items.create!(:image => a, :resume_id => @resume.id)
+          begin
+            params[:items]['image'].each do |a|
+              @items = @resume.items.create!(image: a, resume_id: @resume.id)
+            end
+          rescue ActiveRecord::RecordInvalid => e
+            flash[:error] = "#{e}"
           end
         end
         format.html {render 'resumes/saved'}
@@ -85,6 +89,6 @@ class ResumesController < ApplicationController
       true
     else
       redirect_to '/resumes/new'
-     end
+    end
   end
 end
