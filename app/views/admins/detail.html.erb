@@ -7,7 +7,7 @@
                 <a href=<%= p.image.url %>>Download PDF</a>.</p>
             </embed>
           </object>
-      <% elsif ['docx','doc'].include? file_scan(p) %>
+      <% elsif ['.docx','.doc'].include? file_scan(p) %>
           <iframe src="http://docs.google.com/gview?url=http://47.52.79.74/<%= p.image.url %>&embedded=true"></iframe>
       <% else %>
           <%= image_tag p.image.url %>
