@@ -1,0 +1,39 @@
+<style>
+  .style_modal{
+    max-width: 800px;
+    width: 100%;
+  }
+</style>
+
+<div class="modal fade product_view style_modal" id="detail_modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+        <h3 class="modal-title">Resume Detail</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 product_img">
+            <% @pics.each do |p| %>
+                <% if file_scan(p) == '.pdf' %>
+                    <object data=<%= p.image.url %> type="application/pdf" width="500px" height="500px">
+                      <embed src=<%= p.image.url %> type="application/pdf">
+                        <p>This browser does not support PDFs. Please download the PDF to view it:
+                          <a href=<%= p.image.url %>>Download PDF</a>.</p>
+                      </embed>
+                    </object>
+                <% elsif ['.docx','.doc'].include? file_scan(p) %>
+                    <%= link_to '下载Doc', p.image.url %>
+                <% else %>
+                    <%= image_tag p.image.url style:"width: 500px; height: 500px" %>
+                <% end %>
+            <% end %>
+           </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

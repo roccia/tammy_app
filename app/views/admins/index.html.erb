@@ -22,9 +22,11 @@
           <td><%= resume.gender %></td>
           <td><%= resume.birthday.strftime("%Y-%m") if !resume.birthday.blank? %></td>
           <td><%= resume.college %></td>
-          <td> <%= link_to 'Detail', detail_admin_path(resume),class:'edit_btn' %></td>
+          <td> <%= link_to 'Detail', detail_admin_path(resume),class:'edit_btn',data: {remote: true}%></td>
         </tr>
     <% end %>
     </tbody>
   </table>
+
 </div>
+

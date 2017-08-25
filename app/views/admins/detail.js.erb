@@ -1,0 +1,7 @@
+$(".detail_modal").modal("hide");
+$("<%= j render 'detail', locals: { pics: @pics, title: "detail" } %>")
+.on("hidden.bs.modal", function () {
+    $(this).remove()
+})
+    .appendTo(document.body)
+    .modal("show");
