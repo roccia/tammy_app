@@ -1,8 +1,11 @@
 
-<div class="table-responsive" style="padding:90px;">
-  <table class="table  table-bordered table-striped">
+  <div class="page-header">
+    <h1>简历管理</h1>
+  </div>
+  <table class="table table-hover table-responsive">
     <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Mobile Number</th>
       <th>Email</th>
@@ -10,23 +13,31 @@
       <th>Birthday</th>
       <th>College</th>
       <th>Resume</th>
-
     </tr>
     </thead>
     <tbody>
     <% @resumes.each do |resume| %>
         <tr>
+          <td><%= resume.id %></td>
           <td><%= resume.name %></td>
           <td><%= resume.mobile_number %></td>
           <td><%= resume.email %></td>
           <td><%= resume.gender %></td>
           <td><%= resume.birthday.strftime("%Y-%m") if !resume.birthday.blank? %></td>
           <td><%= resume.college %></td>
-          <td> <%= link_to 'Detail', detail_admin_path(resume),class:'edit_btn',data: {remote: true}%></td>
+          <td> <%= link_to 'Detail', detail_admin_path(resume), class: 'edit_btn', data: {remote: true} %></td>
         </tr>
     <% end %>
     </tbody>
   </table>
 
-</div>
+  <div class="clearfix"></div>
+  <ul class="pagination pull-left">
+    <%= page_entries_info @resumes %>
+
+  </ul>
+  <ul class="pagination pull-right">
+    <%= paginate @resumes %>
+
+  </ul>
 

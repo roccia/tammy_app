@@ -28,7 +28,7 @@
                 <span class="input-group-addon">
                     <span class="fa fa-envelope fa-fw" aria-hidden="true"></span>
                 </span>
-            <%= f.text_field :email, class: 'form-control', placeholder: 'Email', required:true %>
+            <%= f.text_field :email, class: 'form-control', type:'email',placeholder: 'Email', required:true %>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@
       <div class="form-group">
         <label class="hidden-xs control-label col-sm-3"></label>
         <div class="col-sm-9">
-          <%= f.submit 'Submit Resume', class: "btn submit-btn" %>
+          <%= f.submit 'Submit Resume', class: "btn submit-btn" ,data: {remote: true}%>
         </div>
       </div>
   <% end %>

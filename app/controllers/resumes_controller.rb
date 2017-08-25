@@ -36,10 +36,11 @@ class ResumesController < ApplicationController
               @items = @resume.items.create!(image: a, resume_id: @resume.id)
             end
           rescue ActiveRecord::RecordInvalid => e
-            format.html {render 'resumes/error'}
+            format.html {render html:"<script> File size should less than </script>".html_safe}
           end
         end
-        format.html {render 'resumes/saved'}
+        format.html { render js: "alert('test)"}
+
       else
         format.html {render :new}
         format.json {render json: @resume.errors, status: :unprocessable_entity}

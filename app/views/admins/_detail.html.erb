@@ -1,11 +1,27 @@
 <style>
-  .style_modal{
-    max-width: 800px;
-    width: 100%;
+  .modal {
+    text-align: center;
   }
+
+  @media screen and (min-width: 768px) {
+    .modal:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: " ";
+      height: 100%;
+    }
+  }
+
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+
 </style>
 
-<div class="modal fade product_view style_modal" id="detail_modal">
+<div class=" modal fade product_view " id="detail_modal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

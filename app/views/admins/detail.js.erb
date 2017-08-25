@@ -1,7 +1,9 @@
-$(".detail_modal").modal("hide");
-$("<%= j render 'detail', locals: { pics: @pics, title: "detail" } %>")
-.on("hidden.bs.modal", function () {
-    $(this).remove()
-})
-    .appendTo(document.body)
-    .modal("show");
+$("#detail_modal").remove();
+$("body").append("<%= j render partial: 'detail', locals: { pics: @pics } %>");
+$('#detail_modal').on('shown.bs.modal', function () {
+    $(this).find('.modal-dialog').css({width:'auto',
+        height:'auto',
+        'max-height':'100%'});
+});
+
+$("#detail_modal").modal();
