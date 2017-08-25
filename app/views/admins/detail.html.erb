@@ -8,8 +8,8 @@
             </embed>
           </object>
       <% elsif ['.docx','.doc'].include? file_scan(p) %>
-          <iframe src="http://docs.google.com/gview?url=http://47.52.79.74/<%= p.image.url %>&embedded=true"></iframe>
-      <% else %>
+      <%= link_to '下载Doc', p.image.url %>
+       <% else %>
           <%= image_tag p.image.url %>
       <% end %>
   <% end %>
