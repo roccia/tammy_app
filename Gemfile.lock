@@ -182,6 +182,9 @@ GEM
     nokogiri (1.8.0-x86-mingw32)
       mini_portile2 (~> 2.2.0)
     orm_adapter (0.5.0)
+    pdfjs_viewer-rails (0.0.9)
+      rails (> 4.2.0)
+      sass-rails (~> 5.0)
     public_suffix (2.0.5)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -342,6 +345,7 @@ DEPENDENCIES
   mini_magick
   momentjs-rails (>= 2.9.0)
   mysql2 (~> 0.4.9)
+  pdfjs_viewer-rails
   rails (~> 5.1.2)
   sass-rails (~> 5.0)
   selenium-webdriver

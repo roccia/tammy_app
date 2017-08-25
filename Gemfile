@@ -75,5 +75,6 @@ gem 'font-awesome-sass'
 gem 'devise'
 gem 'file_validators'
 
+gem 'pdfjs_viewer-rails'
 
 

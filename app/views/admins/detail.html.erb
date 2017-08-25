@@ -1,5 +1,17 @@
 <div>
   <% @pics.each do |p| %>
-      <%= image_tag p.image.url %>
+      <% if p.image.url.scan(/\.[^\.]+$/)[0] == '.pdf' %>
+          <object data=<%= p.image.url %> type="application/pdf" width="750px" height="750px">
+            <embed src=<%= p.image.url %> type="application/pdf">
+              <p>This browser does not support PDFs. Please download the PDF to view it:
+                <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
+            </embed>
+          </object>
+
+      <% elsif p.image.url.scan(/\.[^\.]+$/)[0] == '.docx' %>
+          <iframe src="http://docs.google.com/gview?url=http://47.52.79.74/<%= p.image.url %>&embedded=true"></iframe>
+      <% else %>
+          <%= image_tag p.image.url %>
+      <% end %>
   <% end %>
 </div>

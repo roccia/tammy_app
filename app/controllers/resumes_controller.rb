@@ -36,11 +36,10 @@ class ResumesController < ApplicationController
               @items = @resume.items.create!(image: a, resume_id: @resume.id)
             end
           rescue ActiveRecord::RecordInvalid => e
-            flash[:error] = "#{e}"
+            format.html {render 'resumes/error'}
           end
         end
         format.html {render 'resumes/saved'}
-        #format.json {render :show, status: :created, location: @resume}
       else
         format.html {render :new}
         format.json {render json: @resume.errors, status: :unprocessable_entity}
