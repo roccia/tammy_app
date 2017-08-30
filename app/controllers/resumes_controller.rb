@@ -39,7 +39,7 @@ class ResumesController < ApplicationController
             format.html {render html:"<script> File size should less than </script>".html_safe}
           end
         end
-        format.html { render js: "alert('test)"}
+        format.html {render 'resumes/saved'}
 
       else
         format.html {render :new}
