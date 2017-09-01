@@ -1,6 +1,6 @@
 class ResumesController < ApplicationController
   layout 'resume'
-  #before_action :check_permission, except: [:create, :saved]
+  before_action :check_permission, except: [:create, :saved]
   before_action :set_resume, only: [:show, :edit, :update, :destroy]
 
   # GET /resumes
@@ -36,7 +36,7 @@ class ResumesController < ApplicationController
               @items = @resume.items.create!(image: a, resume_id: @resume.id)
             end
           rescue ActiveRecord::RecordInvalid => e
-            format.html {render html:"<script> File size should less than </script>".html_safe}
+            format.html {render html: "<script> File size should less than </script>".html_safe}
           end
         end
         format.html {render 'resumes/saved'}

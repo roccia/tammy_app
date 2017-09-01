@@ -1,12 +1,12 @@
 <% content_for :header do %>
-<link rel="stylesheet" href="/static_resources/css/resumes/main.css" />
+    <link rel="stylesheet" href="/static_resources/css/resumes/main.css"/>
 <% end %>
 
-<div class="containerBox" >
+<div class="containerBox">
   <div class="text-box">
     <h4>SHOW UP DIFFERENTLY</h4>
   </div>
-  <%= image_tag "logo.png", class:"img" %>
+  <%= image_tag "logo.png", class: "img" %>
 
 </div>
 <%= render 'form' %>
@@ -21,10 +21,10 @@
 
   .text-box {
     position: absolute;
-    bottom:7px;
-    right:10px;
+    bottom: 7px;
+    right: 10px;
 
-    }
+  }
 
   .text-box:before {
     content: '';
@@ -36,15 +36,16 @@
   h4 {
     display: inline-block;
     font-size: 11px; /*or whatever you want*/
-    font-family: 'HelveticaNeueW01-77BdCn 692722',"Helvetica Neue",Arial,sans-serif;
+    font-family: 'HelveticaNeueW01-77BdCn 692722', "Helvetica Neue", Arial, sans-serif;
     font-weight: bold;
     color: #0b7ac0;
   }
 
   img {
     display: block;
-    max-width:40%;
-   max-height:40%;"
+    max-width: 40%;
+    max-height: 40%;
+  "
 
   }
 
