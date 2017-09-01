@@ -1,13 +1,65 @@
-<div style="display: inline-block;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    margin: auto;">
 
-  <p style="color:#0b7ac0"> 您的简历已入库。请期待来自我们的问候。</p>
+  <style>
+    *{
+      padding:0;
+      margin:0;
+    }
+    html, body{
+      height: 100%;
+    }
+    body{
+      background-color: #FFFFFF;
+    }
+    .main-box{
+      position: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+
+    }
+    .main-box:before{
+      content: ' ';
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: -1px;
+    }
+    .main-box .content{
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 80%;
+      background-color: #fff;
+      border:6px solid #ccc;
+      padding-top: 30px;
+      outline: 2px solid #ccc;
+      outline-offset: -12px;
+    }
+    .main-box .content h3{
+      font-size: 16px;
+      text-align: center;
+      color: #0b7ac0;
+    }
+    .main-box .content .logo-box{
+      width: 30%;
+      margin: 30px auto;
+    }
+    .main-box .content .logo-box img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+  </style>
+
+<body>
+<div class="main-box" >
+  <div class="content" >
+    <h3>您的简历已入库！<br/> <br/> 请期待来自我们的问候！</h3>
+    <div class="logo-box">
+      <%= image_tag "logo.png", class:"img" %>
+    </div>
+  </div>
 </div>
-

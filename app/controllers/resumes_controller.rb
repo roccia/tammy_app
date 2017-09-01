@@ -1,6 +1,6 @@
 class ResumesController < ApplicationController
   layout 'resume'
-  before_action :check_permission, except: [:create, :saved]
+  #before_action :check_permission, except: [:create, :saved]
   before_action :set_resume, only: [:show, :edit, :update, :destroy]
 
   # GET /resumes
