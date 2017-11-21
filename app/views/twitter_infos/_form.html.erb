@@ -6,10 +6,10 @@
   </tr>
   </thead>
   <tbody>
-  <% @twitter_infos.each do |k,v| %>
+  <% @twitter_infos.each do |info| %>
       <tr>
-        <td><%= k[:tweets] %></td>
-        <td><%= k[:created] %></td>
+        <td><%= info[:tweets] %></td>
+        <td><%= info[:created] %></td>
       </tr>
   <% end %>
   </tbody>
