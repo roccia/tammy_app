@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7b335a8-3969-4c3c-975a-34f5a6f834a9" name="Default" comment="" />
+    <list default="true" id="d7b335a8-3969-4c3c-975a-34f5a6f834a9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -23,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/app/models/twitter_info.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+              <caret line="7" column="50" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -42,8 +44,8 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/twitter_infos/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+            <state relative-caret-position="150">
+              <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -142,9 +144,9 @@
         <option value="$PROJECT_DIR$/app/views/twitter_infos/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/twitter_infos_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/twitter_infos/_form.html.erb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/app/models/twitter_info.rb" />
+        <option value="$PROJECT_DIR$/app/views/twitter_infos/_form.html.erb" />
       </list>
     </option>
   </component>
@@ -617,12 +619,12 @@
       <workItem from="1504491737781" duration="1521000" />
       <workItem from="1504687362509" duration="1110000" />
       <workItem from="1504751924949" duration="40000" />
-      <workItem from="1511235473139" duration="11028000" />
+      <workItem from="1511235473139" duration="11297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97266000" />
+    <option name="totallyTimeSpent" value="97535000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1067,8 +1069,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/twitter_infos/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        <state relative-caret-position="150">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1084,7 +1086,7 @@
     <entry file="file://$PROJECT_DIR$/app/models/twitter_info.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <caret line="7" column="50" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="50" />
           <folding />
         </state>
       </provider>
