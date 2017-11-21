@@ -5,7 +5,7 @@ class TwitterInfo < ApplicationRecord
     tweets_info = client.user_timeline(username)
     tweets_info.first(10).map do |t|
       content = t.text
-      created_at = t.created_at
+      created_at = t.created_at.('%Y-%m-%d %H:%M')
      {tweets: content, created: created_at}
     end
 
