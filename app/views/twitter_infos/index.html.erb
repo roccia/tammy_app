@@ -1,0 +1,29 @@
+<div class="page-header">
+  <h1>Tweets List</h1>
+</div>
+<div>
+  <%= form_tag(twitter_infos_path, class: 'form-horizontal', method: 'GET') do %>
+      <div class="row form-group">
+        <div class="col-md-2 text-right">
+          <label class="control-label" for="user_name">User Name</label>
+        </div>
+        <div class="col-md-3">
+          <%= text_field_tag :user_name, params[:user_name], class: 'form-control' %>
+        </div>
+
+        <div class="row form-group">
+          <div class="col-md-offset-2 col-md-3">
+            <%= submit_tag 'Search', class: 'btn btn-default' %>
+          </div>
+        </div>
+  <% end %>
+  </div>
+</div>
+
+<% if !@twitter_infos.nil? %>
+    <%= render 'twitter_infos/form'%>
+<% else %>
+    <h3>No Tweets </h3>
+<% end %>
+
+

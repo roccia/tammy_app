@@ -23,7 +23,7 @@ class AdminManagesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to admin_manage_url(AdminManage.last)
   end
 
-  test "should show admin_manage" do
+  test "should search admin_manage" do
     get admin_manage_url(@admin_manage)
     assert_response :success
   end

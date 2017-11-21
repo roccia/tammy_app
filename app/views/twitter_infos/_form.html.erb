@@ -1,0 +1,16 @@
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th>Tweets</th>
+    <th>Created_at</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @twitter_infos.each do |k,v| %>
+      <tr>
+        <td><%= k[:tweets] %></td>
+        <td><%= k[:created_at] %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

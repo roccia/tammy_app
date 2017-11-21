@@ -9,6 +9,9 @@ Rails.application.routes.draw do
       get 'detail'
     end
   end
-  resources   :resumes
-  resources   :wei_xin
- end
+  resources :resumes
+  resources :wei_xin
+
+  resources :twitter_infos
+
+end

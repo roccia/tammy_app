@@ -23,7 +23,7 @@ class ResumesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to resume_url(Resume.last)
   end
 
-  test "should show resume" do
+  test "should search resume" do
     get resume_url(@resume)
     assert_response :success
   end
